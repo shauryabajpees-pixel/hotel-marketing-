@@ -10,6 +10,11 @@ import {
   BookingStatus,
 } from '../types/hotel';
 
+import heroImg from '../assets/images/hotel_hero_exterior_1790174508617.jpg';
+import deluxeOceanImg from '../assets/images/room_deluxe_ocean_1790174522717.jpg';
+import executiveGardenImg from '../assets/images/room_executive_garden_1790174547668.jpg';
+import penthouseSuiteImg from '../assets/images/room_penthouse_suite_1790174535245.jpg';
+
 // Initial Hotel Entity
 export const INITIAL_HOTEL: Hotel = {
   id: 'hotel-monaco-01',
@@ -17,7 +22,7 @@ export const INITIAL_HOTEL: Hotel = {
   city: 'Monaco · French Riviera',
   address: '14 Boulevard Princesse Charlotte, 98000 Monte Carlo',
   starRating: 5,
-  heroImage: '/src/assets/images/hotel_hero_exterior_1790174508617.jpg',
+  heroImage: heroImg,
   description:
     'Perched high above the Mediterranean Sea, Aura Grand pairs timeless French Riviera glamour with contemporary architectural serenity. Experience Michelin-star gastronomy, private seaside cabanas, and bespoke concierge attention.',
   amenities: [
@@ -41,7 +46,7 @@ export const INITIAL_ROOM_TYPES: RoomType[] = [
     basePrice: 480,
     capacity: 2,
     totalInventory: 4,
-    image: '/src/assets/images/room_deluxe_ocean_1790174522717.jpg',
+    image: deluxeOceanImg,
     description:
       'Uninterrupted azure sea views from private teak loggias. Features custom French oak cabinetry, Italian marble soaking tub, and handcrafted king bed.',
     features: [
@@ -63,7 +68,7 @@ export const INITIAL_ROOM_TYPES: RoomType[] = [
     basePrice: 690,
     capacity: 3,
     totalInventory: 3,
-    image: '/src/assets/images/room_executive_garden_1790174547668.jpg',
+    image: executiveGardenImg,
     description:
       'Nestled within secluded Mediterranean flora. Opens directly into private zen fountain courtyards with shaded daybeds and outdoor rain showers.',
     features: [
@@ -85,7 +90,7 @@ export const INITIAL_ROOM_TYPES: RoomType[] = [
     basePrice: 1250,
     capacity: 4,
     totalInventory: 2,
-    image: '/src/assets/images/room_penthouse_suite_1790174535245.jpg',
+    image: penthouseSuiteImg,
     description:
       'The pinnacle of Mediterranean luxury. A 1,400 sq ft wrap-around terrace, heated outdoor jacuzzi, full bar lounge, and dedicated butler throughout your stay.',
     features: [
