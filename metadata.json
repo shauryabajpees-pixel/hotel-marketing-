@@ -1,0 +1,7 @@
+{
+  "name": "Aura Grand Hotel & PMS",
+  "description": "Full-stack hotel booking engine & Property Management System featuring concurrency-safe reservation holds, interactive room Gantt matrix, housekeeping kanban, and dynamic rate control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
