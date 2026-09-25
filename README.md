@@ -50,6 +50,28 @@ npm run preview
 
 ---
 
+## 🔧 Troubleshooting GitHub Pages Deployment Errors
+
+If you encountered an error in GitHub Pages or GitHub Actions, here is how each common error is resolved:
+
+### 1. `Get Pages site failed with status code 404`
+- **Cause**: GitHub Pages has not yet been told to expect deployments from GitHub Actions.
+- **Fix**: Go to your GitHub repository > **Settings** > **Pages**. Under **Source**, select **GitHub Actions**. Then re-run the workflow under the **Actions** tab.
+
+### 2. `Resource not accessible by integration`
+- **Cause**: GitHub repository settings restrict default workflow permissions.
+- **Fix**: Go to **Settings** > **Actions** > **General** > scroll down to **Workflow permissions** > select **Read and write permissions** > click **Save**.
+
+### 3. `ERESOLVE unable to resolve dependency tree`
+- **Cause**: Strict peer dependency checks on older npm versions.
+- **Fix**: Fixed via `.npmrc` (`legacy-peer-deps=true`) and by removing redundant peer-conflicting `esbuild` devDependency.
+
+### 4. Blank screen on deployed site
+- **Cause**: Relative paths were missing or Jekyll mangled chunk files.
+- **Fix**: Bundled with relative paths (`base: './'`) and included `.nojekyll` to bypass Jekyll.
+
+---
+
 ## 📋 What Was Fixed for GitHub Pages
 
 1. **GitHub Actions Workflow**: Added `.github/workflows/deploy.yml` with necessary token permissions (`pages: write`, `id-token: write`) and automated Node 20 build.
